@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{product[1]}} - Mimi Shop {% endblock%}
+{% block content%}
+<div class="product-card">
+    <h1>{{product[1]}}</h1>
+    <p>{{product[2]}}</p>
+    <img src="/static/images/{{product[5]}}", alt="{{product[1]}}">
+    <p>Price Rs. {{product[3]}}</p>
+    <p>Available Qty {{ product[4]}}</p>
+</div>
+<form method="POST" action="/add-to-cart/{{product[0]}}" class="form">
+    <button type="submit" class="button">Add to Cart</button>
+</form>
+<footer class='footer'>
+        <p>&copy; 2026 Mimi Shop. All rights reserved.</p>
+    </footer>
+{%endblock%}

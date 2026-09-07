@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #008080;
+    margin-bottom: 35px;
+    font-size: 32px;
+}
+
+.product-card{
+    background: paleturquoise;
+    width: 400px;
+    padding: 30px;  
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+.product-card h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+
+}
+
+.product-card p:nth-last-child(2){
+    font-weight: bold;
+    color: teal;
+}
+.product-card p:last-child{
+    font-size: 14px;
+    color: #666;
+}
+
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+}
+
+.product-card img{
+    object-fit: contain;
+    width: 300px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    height: 200px;
+    
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    height: 50px;
+    margin-bottom: 35px;
+    background: paleturquoise;
+    
+}
+
+.logo{
+ 
+    color: teal;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.nav-links{
+    display: flex;
+    gap: 30px;
+    
+}
+
+.hello{
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hello h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+}
+.hello p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.shop-button{
+    display: inline-block;
+    color: teal;
+    background: paleturquoise;
+    border-radius: 12px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.footer{
+    margin-top: auto;
+    padding: 30px 40px;
+    
+    background: paleturquoise;
+    text-align: center;
+}
+.footer p{
+    color: teal;
+}
+
+.form{
+    width: 400px;
+    margin: 0 auto 50px;
+}
+
+.form-box {
+    background: paleturquoise;
+    padding: 30px;
+    border-radius: 15px;
+    
+}
+
+.form-box p{
+    margin-bottom: 20px;
+    color: teal;
+    font-weight: bold;
+
+}
+
+.form-box input{
+    display: block;
+    border: 3px solid teal;
+}
+
+.button {
+    width: 100%;
+    background: white ;
+    border: 3px solid teal;
+    color: teal;
+    font-weight: bold;
+}
+
+.cart-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: paleturquoise;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.cart-item img {
+    width: 180px;
+    height: 150px;
+    object-fit: contain;
+    background: white;
+    border-radius: 10px;
+}
+
+.cart-details {
+    flex: 1;
+}
+
+.cart-details h2 {
+    color: teal;
+    margin-bottom: 15px;
+}
+
+.cart-details p {
+    margin-bottom: 15px;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.qty button {
+    width: 30px;
+    height: 30px;
+    border: 2px solid teal;
+    background: white;
+    color: teal;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qty span {
+    font-weight: bold;
+}
+
+.remove-button {
+    padding: 8px 15px;
+    background: white;
+    border: 2px solid teal;
+    color: teal;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-button:hover,
+.qty button:hover {
+    background: teal;
+    color: white;
+}
+
+.cart-summary {
+    margin-top: 30px;
+    margin-left: auto;
+    width: 300px;
+    padding: 25px;
+    background: paleturquoise;
+    border-radius: 15px;
+}
+
+.cart-summary h2 {
+    color: teal;
+    margin-bottom: 15px;
+}
+
+.cart-summary p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 12px;
+}   
+
+.checkout-container{
+    background: paleturquoise;
+    padding: 50px;
+    margin: 0 auto;
+    border-radius: 25px;
+}
+
+.checkout-container h2{
+    text-align: left;
+    color: teal;
+    margin-bottom: 12px;
+}
+
+.checkout-container p{
+    margin-bottom: 12px;
+
+}
+.order{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dashboard-container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 50px;
+    background: paleturquoise;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.dashboard-container h1 {
+    color: teal;
+    margin-bottom: 20px;
+}
+
+.dashboard-container p {
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.dashboard-container .button {
+    display: inline-block;
+    width: auto;
+    padding: 10px 25px;
+    background: white;
+    border: 3px solid teal;
+    color: teal;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+

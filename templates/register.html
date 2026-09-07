@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Register - Mini Shop {%endblock%}
+{%block content%}
+<h1> Create Account</h1>
+
+<form method="POST" class="form">
+<div class="form-box">
+   <p> Name <input type="text" id="name" name="name" placeholder="Fullname" required></p>
+    <p>Email <input type="email"  id="email" name="email" required placeholder="abc@email.com"></p>
+    <p>Password <input type="password" id="password" name="password" required placeholder="*******"></p>
+    <button type="submit" class="button">Register</button>
+
+</div>
+</form>
+ <footer class='footer'>
+        <p>&copy; 2026 Mimi Shop. All rights reserved.</p>
+    </footer>
+{% endblock %}

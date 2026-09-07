@@ -1,0 +1,20 @@
+{% extends "base.html"%}
+{% block title%}Checkout - Mimi Shop {%endblock%}
+{%block content%}
+<div class="checkout-container">
+    <h1>Order Summary</h1>
+    {%for product in cart_items%}
+    <h2>{{product[1]}}</h2>
+    <p>Price Rs. {{product[3]}}</p>
+    <p>Quantity {{cart[product[0]]}}</p>
+        {%endfor%}
+
+    <p>Total: Rs. {{total}}</p>
+    <form method="POST" action="/confirm-order">
+        <button type="submit" class="button">Confirm Order</button>
+    </form>    
+</div>
+ <footer class='footer'>
+        <p>&copy; 2026 Mimi Shop. All rights reserved.</p>
+    </footer>
+{%endblock%}

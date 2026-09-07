@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Mimi Shop</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Mimi Shop</div>
+        <div class="nav-links">
+              <a href="/">Home</a>
+            <a href="/products">Products</a>
+             <a href="/cart">Cart</a>
+            {% if session.get('user_id')%}
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+            {%else%}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            {%endif%}
+        </div>
+    </nav>
+
+    <h1>Mimi Shop Products</h1>
+
+    <div class="product-container">
+    {% for product in products %}
+
+    <div class=" product-card">
+    <a href="/product/{{product[0]}}">
+        <h2> {{product[0] }}. {{product[1]}} </h2>
+    </a>
+    <p> {{ product[2] }}</p>
+    <img src="/static/images/{{product[5]}}" alt= "{{product[1]}}">
+    <p> Price Rs.{{product[3]}}</p>
+    <p> Available Qty: {{product[4]}}</p>
+    </div>
+
+    {% endfor %}
+    </div>
+
+</body>
+ <footer class='footer'>
+        <p>&copy; 2026 Mimi Shop. All rights reserved.</p>
+    </footer>
+
+</html>

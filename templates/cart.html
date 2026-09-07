@@ -1,0 +1,48 @@
+{% extends "base.html"%}
+{% block title%} CART - Mimi Shop {% endblock%}
+{% block content%}
+<h1> Your Cart</h1>
+<div class="cart-container">
+
+    {% for product in cart_items %}
+
+    <div class="cart-item">
+
+        <img src="/static/images/{{product[5]}}" alt="{{product[1]}}">
+
+        <div class="cart-details">
+            <h2>{{product[1]}}</h2>
+            <p>Price. Rs {{product[3]}}</p>
+
+            <div class="qty">
+
+                <form method="POST" action="/decrease-cart-items/{{product[0]}}">
+                <button type="submit">-</button>
+                </form>
+
+                <span>{{cart[product[0]]}}</span>
+
+                <form method="POST" action="/increase-cart-items/{{product[0]}}">
+                    <button type="submit">+</button>
+                </form>
+                
+            </div>
+            <form method="POST", action="/remove-from-cart/{{product[0]}}">
+            <button class="remove-button" type="submit">Remove</button>
+            </form>
+        </div>
+    </div>
+    {%endfor%}
+    <div class="cart-summary">
+        <h2> Cart Total</h2>
+        <p>Total: Rs. {{total}}</p>
+        <form method="POST" action="/checkout">
+            <button type="submit" class="button">Checkout</button>
+        </form>
+    </div>
+</div>
+
+<footer class='footer'>
+        <p>&copy; 2026 Mimi Shop. All rights reserved.</p>
+    </footer>
+{% endblock %}

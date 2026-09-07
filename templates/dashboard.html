@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Mini Shop{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h1> Welcome to your dashboard! </h1>
+    <p> User_ID: {{session["user_id"]}}</p>
+    <a href="/logout" class="button">Logout</a>
+</div>
+<footer class='footer'>
+        <p>&copy; 2026 Mimi Shop. All rights reserved.</p>
+    </footer>
+{%endblock%}
