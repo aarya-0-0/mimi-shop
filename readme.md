@@ -25,6 +25,12 @@ Mimi Shop was created to practice combining web development, database integratio
 - **MySQL**
 - **Git & GitHub**
 
+## Database Setup
+
+The project uses MySQL. A sample database schema is provided in `database.sql`.
+
+Import the SQL file into MySQL and update the database connection settings in `app.py` or environment variables before running the application.
+
 ## Security
 
 After building the basic functionality, I performed a small security review of the application.
