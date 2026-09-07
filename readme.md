@@ -45,7 +45,7 @@ Path traversal was considered **not applicable** to this version because the app
 
 ## Project Status
 
-**Version 1 — Completed**
+**Version 1  Completed**
 
 This version focuses on core shopping functionality and basic security practices.
 
