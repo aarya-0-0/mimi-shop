@@ -1,19 +1,23 @@
 from flask import Flask, render_template, request, redirect, session
 from werkzeug.security import generate_password_hash, check_password_hash
+from dotenv import load_dotenv
 import mysql.connector
+import os
+
+load_dotenv()
 
 app= Flask(__name__)
-app.secret_key="mimishopkey"
+app.secret_key=os.getenv("SECRET_KEY")
 
 
 
 try:
-    db= mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password='aarya',
-        database='minishop'
-    )
+    db = mysql.connector.connect(
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
+)
     print('Databse Connected')
     cursor = db.cursor(buffered=True)
 except:
